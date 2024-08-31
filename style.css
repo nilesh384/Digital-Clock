@@ -1,0 +1,52 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(45deg, #ff6b6b, #f7d794, #4a90e2, #a5d6ff);
+    background-size: 600% 600%;
+    animation: gradientAnimation 15s ease infinite;
+}
+
+@keyframes gradientAnimation {
+    0% { background-position: 0% 0%; }
+    50% { background-position: 100% 100%; }
+    100% { background-position: 0% 0%; }
+}
+
+.clock {
+    text-align: center;
+    border-radius: 20px;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+}
+
+.time {
+    font-size: 6em;
+    font-weight: bold;
+    color: #ffffff;
+    margin: 0;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+    animation: glow 1.5s ease-in-out infinite alternate;
+}
+
+.date {
+    font-size: 2em;
+    color: #ffffff;
+    margin-top: 10px;
+    font-weight: 300;
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
+    }
+    to {
+        text-shadow: 0 0 10px rgba(255, 255, 255, 1);
+    }
+}
